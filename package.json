@@ -1,0 +1,11 @@
+{
+  "name": "tinychat",
+  "version": "1.0.0",
+  "description": "Chat application",
+  "main": "index.js",
+  "scripts": {
+    "test": "-test"
+  },
+  "author": "Patrick Alexis",
+  "license": "ISC"
+}
