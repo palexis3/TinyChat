@@ -1,6 +1,3 @@
-require('../styles/components/Login.css');
-
-
 import React from 'react';
 
 // Login screen to get a user's username at first launch of application
