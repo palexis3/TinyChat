@@ -24,10 +24,10 @@ class Login extends React.Component {
 
   render() {
 
-    // form was submitted
+    // form was submitted, go to the main chat component
     if(this.state.submitted) {
       return (
-          <h1>{this.state.username}</h1>
+          <MainScreen username={this.state.username} />
       );
     }
 

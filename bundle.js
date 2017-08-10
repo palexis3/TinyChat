@@ -22451,13 +22451,9 @@ var Login = function (_React$Component) {
     key: 'render',
     value: function render() {
 
-      // form was submitted
+      // form was submitted, go to the main chat component
       if (this.state.submitted) {
-        return _react2.default.createElement(
-          'h1',
-          null,
-          this.state.username
-        );
+        return _react2.default.createElement(MainScreen, { username: this.state.username });
       }
 
       return _react2.default.createElement(
