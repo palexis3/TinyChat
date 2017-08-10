@@ -22438,7 +22438,6 @@ var Login = function (_React$Component) {
   _createClass(Login, [{
     key: 'loginSubmitFunc',
     value: function loginSubmitFunc(event) {
-      // dont want invalid username to be accepted i.e empty
       event.preventDefault();
       this.setState({ submitted: true, username: this.state.username });
     }

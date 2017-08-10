@@ -1,6 +1,7 @@
 import React from 'react';
 
 class ChatInput extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = { input: '' };
@@ -10,6 +11,7 @@ class ChatInput extends React.Component {
   }
 
   submitFunc(event) {
+    
     event.preventDefault();
 
     // call the onSend method in the parent component (MainScreen)
@@ -26,11 +28,11 @@ class ChatInput extends React.Component {
   render() {
     return (
       <form className="chat-input" onSubmit={this.submitFunc}>
-      <input type="text"
-             onChange={this.onTextChangeFunc}
-             value={this.state.input}
-             placeholder="Please enter in a message..."
-             required />
+        <input type="text"
+               onChange={this.onTextChangeFunc}
+               value={this.state.input}
+               placeholder="Please enter in a message..."
+               required />
       </form>
     );
   }

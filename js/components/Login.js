@@ -5,7 +5,7 @@ class Login extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { username: ''};
+    this.state = { username: '' };
 
     // React doesn't automatically bind 'this' to event handlers
     this.loginSubmitFunc = this.loginSubmitFunc.bind(this);
@@ -13,7 +13,6 @@ class Login extends React.Component {
   }
 
   loginSubmitFunc(event) {
-    // dont want invalid username to be accepted i.e empty
     event.preventDefault();
     this.setState({ submitted: true, username: this.state.username });
   }
