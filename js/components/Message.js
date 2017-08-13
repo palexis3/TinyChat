@@ -3,7 +3,6 @@ import React from 'react';
 class Message extends React.Component {
 
   render() {
-
     // checking to see if this message was sent by me
     const wasItMe = this.props.wasItMe ? 'was-it-me' : '';
 
