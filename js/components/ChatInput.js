@@ -11,11 +11,11 @@ class ChatInput extends React.Component {
   }
 
   submitFunc(event) {
-    
+
     event.preventDefault();
 
     // call the onSend method in the parent component (MainScreen)
-    this.props.onSend({ this.state.input });
+    this.props.onSend(this.state.input);
 
     // clear input box
     this.setState({ input: '' });

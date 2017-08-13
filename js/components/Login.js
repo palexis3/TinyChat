@@ -1,4 +1,5 @@
 import React from 'react';
+import MainScreen from './MainScreen';
 
 // Login screen to get a user's username at first launch of application
 class Login extends React.Component {
@@ -23,13 +24,14 @@ class Login extends React.Component {
 
   render() {
 
-    // form was submitted, go to the main chat component
+    // form was submitted, go to the MainScreen component
     if(this.state.submitted) {
       return (
           <MainScreen username={this.state.username} />
       );
     }
 
+    // initial item shown is a form to get a user's username
     return (
       <form onSubmit={this.loginSubmitFunc} className="login-container">
         <h1>TinyChat</h1>

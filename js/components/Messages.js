@@ -19,7 +19,7 @@ class Messages extends React.Component {
            message={message.message}
            wasitMe={message.wasItMe} />
        );
-    )};
+    });
 
     return (
       <div className="messages" id="messagesList">
@@ -30,7 +30,7 @@ class Messages extends React.Component {
 }
 
 Messages.defaultProps = {
-  messages: ["Hello world"]
+  messages: []
 };
 
 export default Messages;
