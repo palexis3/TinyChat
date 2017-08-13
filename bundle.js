@@ -22414,6 +22414,10 @@ var _MainScreen = __webpack_require__(185);
 
 var _MainScreen2 = _interopRequireDefault(_MainScreen);
 
+__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"././styles/components/Login.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"././styles/components/App.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22692,7 +22696,6 @@ var Message = function (_React$Component) {
   _createClass(Message, [{
     key: 'render',
     value: function render() {
-
       // checking to see if this message was sent by me
       var wasItMe = this.props.wasItMe ? 'was-it-me' : '';
 

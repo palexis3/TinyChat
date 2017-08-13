@@ -1,5 +1,7 @@
 import React from 'react';
 import MainScreen from './MainScreen';
+import '././styles/components/Login.css';
+import '././styles/components/App.css';
 
 // Login screen to get a user's username at first launch of application
 class Login extends React.Component {
