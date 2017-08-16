@@ -1,20 +1,33 @@
-.chatContainer {
+.chat-container {
+  display: block;
+  position: relative;
+  /*
   display: flex;
   flex-direction: column;
+  */
 }
 
 .messages {
+  padding: 20px;
+  display: block;
+  height: auto;
+ /*
   overflow-y: scroll;
   overflow-x: hidden;
   flex-grow: 1;
   padding: 20px;
+  */
 }
 
 .chat-input {
-  position: relative;
-  overflow: hidden;
+  position: absolute | fixed;
+  bottom: 0px;
+  overflow: scroll;
   padding: 0 40px;
+  /*
+
   flex-shrink: 0;
+  */
 }
 
 .chat-input input[type="text"] {
@@ -28,8 +41,9 @@
 }
 
 .message.was-it-me {
-  display: flex;
+  /*display: flex;
   justify-content: flex-end;
+  */
   margin-bottom: 5px;
 }
 
@@ -42,7 +56,7 @@
   margin-bottom: 20px;
 }
 .message-body {
-  max-width: 80%;
+  max-width: 100%;
   display: inline-block;
   padding: 20px;
   background-color: #eee;
@@ -53,7 +67,7 @@
 
 .username {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #999;
   margin-bottom: 5px;
 }
