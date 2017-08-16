@@ -2,6 +2,7 @@
 import React from 'react';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
+import '~/styles/components/MainScreen.css';
 
 class MainScreen extends React.Component {
 
@@ -22,7 +23,8 @@ class MainScreen extends React.Component {
     this.addMessage(messageObj);
   }
 
-  // in this function, message is actually an object that encapsulates username, message and boolean 'wasItMe'
+  // in this function, message is actually an object that encapsulates username,
+  // message and boolean 'wasItMe'
   addMessage(message) {
     const messages = this.state.messages;
     messages.push(message);
@@ -31,7 +33,7 @@ class MainScreen extends React.Component {
 
   render() {
     return (
-      <div className="chatContainer">
+      <div className="chat-container">
           <Messages messages={this.state.messages} />
           <ChatInput onSend={this.sendFunc} />
       </div>

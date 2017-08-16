@@ -50,7 +50,6 @@ class Login extends React.Component {
   }
 }
 
-Login.defaultProps = {
-};
+Login.defaultProps = {};
 
 export default Login;

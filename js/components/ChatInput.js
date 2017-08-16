@@ -38,7 +38,6 @@ class ChatInput extends React.Component {
   }
 }
 
-ChatInput.defaultProps = {
-};
+ChatInput.defaultProps = {};
 
 export default ChatInput;
