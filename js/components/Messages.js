@@ -5,7 +5,7 @@ class Messages extends React.Component {
 
   // React 'componentDidUpdate' lifecycle function is used to scroll to bottom of list
   componentDidUpdate() {
-    const divObj = document.getElementById('messagesList');
+    const divObj = document.getElementById('messages-list');
     divObj.scrollTop = divObj.scrollHeight;
   }
 
@@ -22,7 +22,7 @@ class Messages extends React.Component {
     });
 
     return (
-      <div className="messages" id="messagesList">
+      <div className="messages" id="messages-list">
         { messages_all }
       </div>
     );

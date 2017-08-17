@@ -11,16 +11,16 @@ class Login extends React.Component {
     this.state = { username: '' };
 
     // React doesn't automatically bind 'this' to event handlers
-    this.loginSubmitFunc = this.loginSubmitFunc.bind(this);
-    this.usernameChangeFunc = this.usernameChangeFunc.bind(this);
+    this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
+    this.handleUsernameChange = this.handleUsernameChange.bind(this);
   }
 
-  loginSubmitFunc(event) {
+  handleLoginSubmit(event) {
     event.preventDefault();
     this.setState({ submitted: true, username: this.state.username });
   }
 
-  usernameChangeFunc(event) {
+  handleUsernameChange(event) {
     this.setState({ username: event.target.value });
   }
 
@@ -35,12 +35,12 @@ class Login extends React.Component {
 
     // initial item shown is a form to get a user's username
     return (
-      <form onSubmit={this.loginSubmitFunc} className="login-container">
+      <form onSubmit={this.handleLoginSubmit} className="login-container">
         <h1>TinyChat</h1>
         <div>
           <input
             type="text"
-            onChange={this.usernameChangeFunc}
+            onChange={this.handleUsernameChange}
             placeholder="Please enter in a username:"
             required />
         </div>

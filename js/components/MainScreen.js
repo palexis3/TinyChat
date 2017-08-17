@@ -9,10 +9,10 @@ class MainScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { messages: [] };
-    this.sendFunc = this.sendFunc.bind(this);
+    this.handleSend = this.handleSend.bind(this);
   }
 
-  sendFunc(message) {
+  handleSend(message) {
     const messageObj = {
       username: this.props.username,
       wasItMe: true,
@@ -34,7 +34,7 @@ class MainScreen extends React.Component {
       <div className="chat-container">
           <h3>TinyChat</h3>
           <Messages messages={this.state.messages} />
-          <ChatInput onSend={this.sendFunc} />
+          <ChatInput onSend={this.handleSend} />
       </div>
     );
   }
