@@ -23145,27 +23145,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Message = function (_React$Component) {
   _inherits(Message, _React$Component);
 
-  function Message(props) {
+  function Message() {
     _classCallCheck(this, Message);
 
-    var _this = _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, props));
-
-    _this.handleMessageChange = _this.handleMessageChange.bind(_this);
-    _this.state = { message: _this.props.message, editing: false };
-    return _this;
+    return _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).apply(this, arguments));
   }
 
   _createClass(Message, [{
-    key: 'handleMessageChange',
-    value: function handleMessageChange(text) {
-      this.setState({ message: text });
-    }
-  }, {
-    key: 'handleTextValidation',
-    value: function handleTextValidation(text) {
-      return text.length > 0;
-    }
-  }, {
     key: 'render',
     value: function render() {
 
@@ -23183,19 +23169,13 @@ var Message = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'message-body' },
-          _react2.default.createElement(_reactEditInline2.default, {
-            validate: this.handleTextValidation,
-            text: _react2.default.createElement(
-              _reactLinkify2.default,
-              null,
-              ' ',
-              this.state.message,
-              ' '
-            ),
-            paramName: 'message',
-            change: this.handleMessageChange,
-            editing: this.state.editing
-          })
+          _react2.default.createElement(
+            _reactLinkify2.default,
+            null,
+            ' ',
+            this.props.message,
+            ' '
+          )
         )
       );
     }

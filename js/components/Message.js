@@ -4,21 +4,6 @@ import InlineEdit from 'react-edit-inline';
 
 class Message extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    this.handleMessageChange = this.handleMessageChange.bind(this);
-    this.state =  { message: this.props.message, editing: false };
-  }
-
-  handleMessageChange(text) {
-    this.setState({ message: text });
-  }
-
-  handleTextValidation(text) {
-    return text.length > 0;
-  }
-
   render() {
 
     // checking to see if this message was sent by me
@@ -30,13 +15,7 @@ class Message extends React.Component {
           { this.props.username }
         </div>
         <div className='message-body' >
-          <InlineEdit
-            validate= { this.handleTextValidation }
-            text= { <Linkify> { this.state.message } </Linkify> }
-            paramName = "message"
-            change= { this.handleMessageChange }
-            editing= { this.state.editing }
-          />
+          <Linkify> { this.props.message } </Linkify>
         </div>
       </div>
     );
