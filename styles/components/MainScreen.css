@@ -1,5 +1,5 @@
 .chat-container {
-  height: 600px;
+  height: 580px;
   padding: 2px;
 
   /*
@@ -13,8 +13,16 @@
   */
 }
 
+h3 {
+  text-align: center;
+  padding: 10px 0;
+  color: #FFFFFF;
+  margin: 0;
+  background-color: #0099CC;
+}
+
 .messages {
-  height: 550px;
+  height: 530px;
   padding: 20px;
   display: block;
   overflow: auto;

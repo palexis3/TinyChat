@@ -1,4 +1,4 @@
-// the MainScreen component contains the Messages and Input components simulate a chat screen
+ // the MainScreen component contains the Messages and Input components simulate a chat screen
 import React from 'react';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
@@ -10,7 +10,6 @@ class MainScreen extends React.Component {
     super(props);
     this.state = { messages: [] };
     this.sendFunc = this.sendFunc.bind(this);
-
   }
 
   sendFunc(message) {
@@ -19,7 +18,6 @@ class MainScreen extends React.Component {
       wasItMe: true,
       message
     };
-
     this.addMessage(messageObj);
   }
 
@@ -34,6 +32,7 @@ class MainScreen extends React.Component {
   render() {
     return (
       <div className="chat-container">
+          <h3>TinyChat</h3>
           <Messages messages={this.state.messages} />
           <ChatInput onSend={this.sendFunc} />
       </div>

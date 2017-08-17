@@ -22980,7 +22980,6 @@ var MainScreen = function (_React$Component) {
 
     _this.state = { messages: [] };
     _this.sendFunc = _this.sendFunc.bind(_this);
-
     return _this;
   }
 
@@ -22992,7 +22991,6 @@ var MainScreen = function (_React$Component) {
         wasItMe: true,
         message: message
       };
-
       this.addMessage(messageObj);
     }
 
@@ -23012,6 +23010,11 @@ var MainScreen = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'chat-container' },
+        _react2.default.createElement(
+          'h3',
+          null,
+          'TinyChat'
+        ),
         _react2.default.createElement(_Messages2.default, { messages: this.state.messages }),
         _react2.default.createElement(_ChatInput2.default, { onSend: this.sendFunc })
       );
@@ -23145,7 +23148,7 @@ var Message = function (_React$Component) {
     key: 'render',
     value: function render() {
       // checking to see if this message was sent by me
-      var wasItMe = this.props.wasItMe ? '' : '';
+      var wasItMe = this.props.wasItMe ? 'was-it-me' : '';
 
       return _react2.default.createElement(
         'div',
@@ -25942,7 +25945,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".chat-container {\n  height: 600px;\n  padding: 2px;\n\n  /*\n  display: block;\n  position: relative;\n  */\n\n  /*\n  display: flex;\n  flex-direction: column;\n  */\n}\n\n.messages {\n  height: 550px;\n  padding: 20px;\n  display: block;\n  overflow: auto;\n /*\n  overflow-y: scroll;\n  overflow-x: hidden;\n  flex-grow: 1;\n  padding: 20px;\n  */\n}\n\n.chat-input {\n  position: absolute | fixed;\n  bottom: 0px;\n  overflow: auto;\n  padding: 0 40px;\n  /*\n\n  flex-shrink: 0;\n  */\n}\n\n.chat-input input[type=\"text\"] {\n  width: 100%;\n  margin-left: -20px;\n  margin-right: -20px;\n}\n\n.message.was-it-me .username {\n  display: none;\n}\n\n.message.was-it-me {\n  /*display: flex;\n  justify-content: flex-end;\n  */\n  margin-bottom: 5px;\n}\n\n.message.was-it-me .message-body {\n  background-color: #af9570;\n  color: white;\n}\n\n.message {\n  margin-bottom: 20px;\n}\n.message-body {\n  max-width: 100%;\n  display: inline-block;\n  padding: 20px;\n  background-color: #eee;\n  border: 1px;\n  border-radius: 5px;\n  padding-right: 50px;\n}\n\n.username {\n  font-weight: bold;\n  font-size: 1.2rem;\n  color: #999;\n  margin-bottom: 5px;\n}\n", ""]);
+exports.push([module.i, ".chat-container {\n  height: 580px;\n  padding: 2px;\n\n  /*\n  display: block;\n  position: relative;\n  */\n\n  /*\n  display: flex;\n  flex-direction: column;\n  */\n}\n\nh3 {\n  text-align: center;\n  padding: 10px 0;\n  color: #FFFFFF;\n  margin: 0;\n  background-color: #0099CC;\n}\n\n.messages {\n  height: 530px;\n  padding: 20px;\n  display: block;\n  overflow: auto;\n /*\n  overflow-y: scroll;\n  overflow-x: hidden;\n  flex-grow: 1;\n  padding: 20px;\n  */\n}\n\n.chat-input {\n  position: absolute | fixed;\n  bottom: 0px;\n  overflow: auto;\n  padding: 0 40px;\n  /*\n\n  flex-shrink: 0;\n  */\n}\n\n.chat-input input[type=\"text\"] {\n  width: 100%;\n  margin-left: -20px;\n  margin-right: -20px;\n}\n\n.message.was-it-me .username {\n  display: none;\n}\n\n.message.was-it-me {\n  /*display: flex;\n  justify-content: flex-end;\n  */\n  margin-bottom: 5px;\n}\n\n.message.was-it-me .message-body {\n  background-color: #af9570;\n  color: white;\n}\n\n.message {\n  margin-bottom: 20px;\n}\n.message-body {\n  max-width: 100%;\n  display: inline-block;\n  padding: 20px;\n  background-color: #eee;\n  border: 1px;\n  border-radius: 5px;\n  padding-right: 50px;\n}\n\n.username {\n  font-weight: bold;\n  font-size: 1.2rem;\n  color: #999;\n  margin-bottom: 5px;\n}\n", ""]);
 
 // exports
 
