@@ -27,13 +27,15 @@ class ChatInput extends React.Component {
 
   render() {
     return (
-      <form className="chat-input" onSubmit={this.submitFunc}>
-        <input type="text"
-               onChange={this.onTextChangeFunc}
-               value={this.state.input}
-               placeholder="Please enter in a message..."
-               required />
-      </form>
+      <div className="chat-input">
+        <form onSubmit={this.submitFunc}>
+          <input type="text"
+                 onChange={this.onTextChangeFunc}
+                 value={this.state.input}
+                 placeholder="Enter in a message..."
+                 required />
+        </form>
+      </div>
     );
   }
 }
