@@ -1,4 +1,5 @@
 import React from 'react';
+import Linkify from 'react-linkify';
 
 class Message extends React.Component {
 
@@ -11,9 +12,11 @@ class Message extends React.Component {
         <div className='username'>
           {this.props.username}
         </div>
-        <div className='message-body'>
-          {this.props.message}
-        </div>
+        <Linkify>
+          <div className='message-body'>
+            {this.props.message}
+          </div>
+        </Linkify>
       </div>
     );
   }
