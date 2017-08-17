@@ -17,7 +17,8 @@ class Messages extends React.Component {
            key={i}
            username={message.username}
            message={message.message}
-           wasitMe={message.wasItMe} />
+           wasitMe={message.wasItMe}
+           onMessageChanged={this.handleMessage}/>
        );
     });
 

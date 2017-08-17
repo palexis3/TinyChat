@@ -12,14 +12,26 @@ class Message extends React.Component {
   }
 
   handleMessageChange(text) {
-    this.setState({ message: text , editing: !editing });
+    this.setState({ message: text });
   }
 
   handleTextValidation(text) {
     return text.length > 0;
   }
 
+  /*
+  mouseEnter() {
+    this.setState({ this.state.isMouseInside: true });
+  }
+
+  mouseLeave() {
+    this.setState({ this.state.isMouseInside: false });
+  }
+  */
+
+
   render() {
+
     // checking to see if this message was sent by me
     const wasItMe = this.props.wasItMe ? 'was-it-me' : '';
 
@@ -28,7 +40,7 @@ class Message extends React.Component {
         <div className='username'>
           { this.props.username }
         </div>
-        <div className='message-body'>
+        <div className='message-body' >
           <InlineEdit
             validate= { this.handleTextValidation }
             text= { <Linkify> { this.state.message } </Linkify> }
