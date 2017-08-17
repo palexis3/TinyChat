@@ -23080,13 +23080,16 @@ var Messages = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       // loop through all mesages passed through prop to get the list of messages in chat
       var messages_all = this.props.messages.map(function (message, i) {
         return _react2.default.createElement(_Message2.default, {
           key: i,
           username: message.username,
           message: message.message,
-          wasitMe: message.wasItMe });
+          wasitMe: message.wasItMe,
+          onMessageChanged: _this2.handleMessage });
       });
 
       return _react2.default.createElement(
@@ -23155,7 +23158,7 @@ var Message = function (_React$Component) {
   _createClass(Message, [{
     key: 'handleMessageChange',
     value: function handleMessageChange(text) {
-      this.setState({ message: text, editing: !editing });
+      this.setState({ message: text });
     }
   }, {
     key: 'handleTextValidation',
@@ -23165,6 +23168,7 @@ var Message = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+
       // checking to see if this message was sent by me
       var wasItMe = this.props.wasItMe ? 'was-it-me' : '';
 

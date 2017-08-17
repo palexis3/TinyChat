@@ -19,17 +19,6 @@ class Message extends React.Component {
     return text.length > 0;
   }
 
-  /*
-  mouseEnter() {
-    this.setState({ this.state.isMouseInside: true });
-  }
-
-  mouseLeave() {
-    this.setState({ this.state.isMouseInside: false });
-  }
-  */
-
-
   render() {
 
     // checking to see if this message was sent by me
