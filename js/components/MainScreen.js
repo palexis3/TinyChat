@@ -1,8 +1,13 @@
- // the MainScreen component contains the Messages and Input components simulate a chat screen
 import React from 'react';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
 import '~/styles/components/MainScreen.css';
+
+
+/*
+  PURPOSE: MainScreen is the main chat Component that contains the Messages and ChatInput components
+          to show list of messages and user input area, respectively.
+*/
 
 class MainScreen extends React.Component {
 
@@ -12,6 +17,7 @@ class MainScreen extends React.Component {
     this.handleSend = this.handleSend.bind(this);
   }
 
+  // send handler that is constructs a message object accordingly
   handleSend(message) {
     const messageObj = {
       username: this.props.username,
@@ -21,8 +27,7 @@ class MainScreen extends React.Component {
     this.addMessage(messageObj);
   }
 
-  // in this function, message is actually an object that encapsulates username,
-  // message and boolean 'wasItMe'
+  // append this message to our list of messages
   addMessage(message) {
     const messages = this.state.messages;
     messages.push(message);

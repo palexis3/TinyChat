@@ -3,7 +3,11 @@ import MainScreen from './MainScreen';
 import '~/styles/components/Login.css';
 import '~/styles/components/App.css';
 
-// Login screen to get a user's username at first launch of application
+/*
+   PURPOSE : Login screen to get a user's username to then enter
+            the main chat room
+*/
+
 class Login extends React.Component {
 
   constructor(props) {

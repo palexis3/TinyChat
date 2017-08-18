@@ -1,6 +1,10 @@
 import React from 'react';
 import Message from './Message';
 
+/*
+  PURPOSE: Loop through all Messages and create a single Message component
+*/
+
 class Messages extends React.Component {
 
   // React 'componentDidUpdate' lifecycle function is used to scroll to bottom of list
@@ -17,8 +21,7 @@ class Messages extends React.Component {
            key={i}
            username={message.username}
            message={message.message}
-           wasitMe={message.wasItMe}
-           onMessageChanged={this.handleMessage}/>
+           wasitMe={message.wasItMe} />
        );
     });
 

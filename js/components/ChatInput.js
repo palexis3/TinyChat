@@ -1,5 +1,10 @@
 import React from 'react';
 
+/*
+  PURPOSE: Input section below Messages component that allows user to input
+          a message.
+*/
+
 class ChatInput extends React.Component {
 
   constructor(props) {
@@ -15,7 +20,7 @@ class ChatInput extends React.Component {
 
     // call the onSend method in the parent component (MainScreen)
     this.props.onSend(this.state.input);
-    
+
     // clear input box
     this.setState({ input: '' });
   }
